@@ -36,31 +36,32 @@
       <div class="section__container header__container" id="home">
         <h1>STOP BERITA HOAX dan PROVOKASI UNTUK PILKADA DAMAI 2024</h1>
         <p>
-          You do not have the right to remain silent. Let us know what it takes
-          to challenge you
+          Temukan berita terpercaya dan hindari Hoax dan Provokasi untuk pilkada damai 2024
         </p>
         <div class="booking">
           <div class="booking__type" id="booking-type">
-            <div class="active">Carut 1</div>
-            <div>Carut 2</div>
-            <div>Carut 3</div>
+            <div class="active">Calon 1</div>
+            <div>Calon 2</div>
+            <div>Calon 3</div>
           </div>
           <form action="/" class="booking__form">
+
             <div class="booking__input">
-              <label for="arrival">To</label>
-              <input type="text" placeholder="Arrival" />
-            </div>
+              <label for="arrival">Cari disini</label>
+              <input type="text" placeholder="Cari Seputar Calon Disini" />
+            </div>            
             <div class="booking__input">
-              <label for="departure">From</label>
-              <input type="text" placeholder="Departure" />
-            </div>
-            <div class="booking__input">
-              <label for="date">Date</label>
-              <input type="text" placeholder="Date" />
+              <label for="date">Cari Menurut</label>
+              <select id="mySelect" onchange="myFunction()">
+                <option value="ex">Filter</option>
+                <option value="nilai1">Hoax</option>
+                <option value="nilai2">Provokasi</option>
+                <option value="nilai3">Berita Real</option>
+              </select>             
             </div>
           </form>
           <div class="booking__btn">
-            <button class="btn">Book Now</button>
+            <button class="btn">Cari</button>
           </div>
         </div>
       </div>
@@ -82,7 +83,7 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn">See All</button>
+              <button class="btn" onclick="openModal('all')">See All</button>
             </div>
           </div>
         </div>
@@ -96,7 +97,7 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn">See All</button>
+              <button class="btn" onclick="openModal('anies')">See All</button>
             </div>
           </div>
         </div>
@@ -110,7 +111,7 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn">See All</button>
+              <button class="btn" onclick="openModal('prabowo')">See All</button>
             </div>
           </div>
         </div>
@@ -124,12 +125,25 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn">See All</button>
+              <button class="btn" onclick="openModal('ganjar')">See All</button>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Detail Calon Pemimpin Bangsa</h2>
+        <p id="modalContent">Pilihlah sesuai hati dan akal yang sehat</p>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
 
     <section class="section__container offer__container" id="offer">
       <div class="offer__header">
@@ -142,8 +156,8 @@
           <h4>Kasus 1</h4>
           <p>15 Sep 2023</p>
           <div>
-            <span>Hoax</span>
-            <button class="btn">Rate Now</button>
+            <span class="emoji" data-type="hoax">😢😠😊</span>
+            <button class="btn" onclick="rateNews('hoax')">Rate Now</button>
           </div>
         </div>
         <div class="offer__card">
@@ -151,8 +165,8 @@
           <h4>Kasus 2</h4>
           <p>15 Sep 2023</p>
           <div>
-            <span>Hoax</span>
-            <button class="btn">Rate Now</button>
+            <span class="emoji" data-type="hoax">😢😠😊</span>
+            <button class="btn" onclick="rateNews('hoax')">Rate Now</button>
           </div>
         </div>
         <div class="offer__card">
@@ -160,8 +174,8 @@
           <h4>Kasus 3</h4>
           <p>15 Sep 2023</p>
           <div>
-            <span>Hoax</span>
-            <button class="btn">Rate Now</button>
+            <span class="emoji" data-type="hoax">😢😠😊</span>
+            <button class="btn" onclick="rateNews('hoax')">Rate Now</button>
           </div>
         </div>
     </section>
