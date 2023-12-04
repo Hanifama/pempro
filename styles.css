@@ -317,6 +317,21 @@ nav {
   z-index: 999;
 }
 
+.modal-content p, .modal-content h1, .modal-content h2, .modal-content h3, .modal-content h4, .modal-content h5, .modal-content h6 {
+  line-height: 1.6;
+}
+
+
+/* Aturan media query untuk tampilan seluler */
+@media (max-width: 768px) {
+  .modal {
+    width: 90%;
+    max-width: none; 
+    height: 90%; 
+    max-height: none;
+  }  
+}
+
 .emoji {
   font-size: 24px;
 }

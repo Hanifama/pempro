@@ -83,7 +83,7 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn" onclick="openModal('all')">See All</button>
+              <button class="btn" onclick="openModal('all')">See All</button>              
             </div>
           </div>
         </div>
@@ -97,7 +97,8 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn" onclick="openModal('anies')">See All</button>
+              <button class="btn" onclick="openModal('anies')">Visi Misi</button>
+              <button class="btn" id="btnProfile" onclick="showProfile('anies')">Profil Calon</button>
             </div>
           </div>
         </div>
@@ -111,7 +112,8 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn" onclick="openModal('prabowo')">See All</button>
+              <button class="btn" onclick="openModal('prabowo')">Visi Misi</button>
+              <button class="btn" id="btnProfile" onclick="showProfile('prabowo')">Profil Calon</button>
             </div>
           </div>
         </div>
@@ -125,7 +127,8 @@
               </p>
             </div>
             <div class="service__btn">
-              <button class="btn" onclick="openModal('ganjar')">See All</button>
+              <button class="btn" onclick="openModal('ganjar')">Visi Misi</button>
+              <button class="btn" id="btnProfile" onclick="showProfile('ganjar')">Profil Calon</button>
             </div>
           </div>
         </div>
@@ -136,14 +139,30 @@
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle">Detail Calon Pemimpin Bangsa</h2>
-        <p id="modalContent">Pilihlah sesuai hati dan akal yang sehat</p>
+       
+        <div class="vision-mission-section">
+          <h2 id="modalTitle">Detail Calon Pemimpin Bangsa</h2>
+          <p id="modalContent">Pilihlah sesuai hati dan akal yang sehat</p>
+        </div>
+                
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="Profile" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+       
+        <div class="profile-section">
+          <h2 id="modalProfile">Test 1</h2>
+          <p id="modalIsi">test 2</p>
+        </div>
+                
       </div>
     </div>
 
     <!-- Overlay -->
-    <div id="overlay"></div>
-
+    <div id="overlay"></div>   
 
     <section class="section__container offer__container" id="offer">
       <div class="offer__header">
@@ -192,13 +211,11 @@
         <ul>
           <li>
             <span><i class="ri-checkbox-circle-line"></i></span>
-            Easily find and compare transportation options, ensuring a
-            hassle-free journey to your next destination.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa perspiciatis nisi eum, porro dolor reprehenderit.
           </li>
           <li>
             <span><i class="ri-checkbox-circle-line"></i></span>
-            Enjoy a straightforward and quick booking experience for flights,
-            trains, and other transportation modes, all in one place.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam repudiandae dolores corrupti impedit facilis nemo.
           </li>
         </ul>
         <div class="about__links">
