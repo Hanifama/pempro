@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #5484dd;
+  --secondary-color:#292b2c;
   --primary-color-dark: #112b5a;
   --text-dark: #333333;
   --text-light: #767268;
@@ -77,8 +78,8 @@ body {
 .header {
   padding-top: 4rem;
   background-image: linear-gradient(
-      rgba(17, 43, 90, 0.7),
-      rgba(17, 43, 90, 0.7)
+      rgba(78, 91, 115, 0.7),
+      rgba(27, 27, 27, 0.7)
     ),
     url("assets/pilkada.jpg");
   background-position: center center;
@@ -481,7 +482,7 @@ nav {
 }
 
 .footer {
-  background-color: var(--primary-color-dark);
+  background-color: var(--secondary-color);
 }
 
 .footer__container {
