@@ -697,23 +697,23 @@ function showBerita(type) {
       case 'kasusvideo':
         modalTitle.innerText = "Detail Kasus Video yang viral";
         modalContent.innerHTML = `
-        <h1 style="color: red;">HOAX</h1>
-        <p>dalam video tersebut, penundaan Pemilu 2024 dinyatakan sebagai usulan dan keputusan terkait penundaan itu tergantung pada setiap ketua umum fraksi yang ada di DPR dan MPR. Sementara, Ketua DPR RI Puan Maharani seperti dilaporkan ANTARA, pada 15 Febuari 2022, menegaskan jadwal Pemilu 2024 telah ada dan merupakan kesepakatan bersama antara pemerintah, DPR RI, dan penyelenggara pemilu. Dengan demikian menurut Puan, Pemilu 2024 akan dilaksanakan sesuai dengan tanggal yang telah ditentukan, yaitu 14 Februari 2022. Selain itu pada 22 Maret 2022, Dewan Perwakilan Daerah (DPD) RI bersama Kementerian Dalam Negeri (Kemendagri) menyepakati tidak ada penundaan Pemilu 2024.</p>
         
+        <p>dalam video tersebut, penundaan Pemilu 2024 dinyatakan sebagai usulan dan keputusan terkait penundaan itu tergantung pada setiap ketua umum fraksi yang ada di DPR dan MPR. Sementara, Ketua DPR RI Puan Maharani seperti dilaporkan ANTARA, pada 15 Febuari 2022, menegaskan jadwal Pemilu 2024 telah ada dan merupakan kesepakatan bersama antara pemerintah, DPR RI, dan penyelenggara pemilu. Dengan demikian menurut Puan, Pemilu 2024 akan dilaksanakan sesuai dengan tanggal yang telah ditentukan, yaitu 14 Februari 2022. Selain itu pada 22 Maret 2022, Dewan Perwakilan Daerah (DPD) RI bersama Kementerian Dalam Negeri (Kemendagri) menyepakati tidak ada penundaan Pemilu 2024.</p>
+        <h1 style="color: red;">HOAX</h1>
         `;
         break;
       case 'kasushack':
-        modalTitle.innerText = "Kasus Hack";
-        modalContent.innerHTML = `
-        <h1 style="color: green;">REAL</h1>
+        modalTitle.innerText = "Penjelasan KPU dibobol hacker";
+        modalContent.innerHTML = `        
         <p>Website resmi Komisi Pemilihan Umum (KPU) dilaporkan dibobol hacker dan kabarnya 204 juta data daftar pemilih tetap (DPT) bocor. Wakil Ketua Komisi I DPR RI, Abdul Kharis mengatakan kebocoran data ini harus dipertanggungjawabkan oleh pengolah data yakni KPU.</p><br/><p>Sementara Communication and Information System Security Research Center (CISSReC) mengatakan kebocoran data KPU merupakan data DPT terkait Pemilu. Dimana data sample 500 ribu yang ditunjukkan hacker sangat terbuka yang meliputi data KK, KTP hingga TPS.</p><br/><p>Chairman Lembaga Riset Keamanan Siber CISSReC, Pratama Persada mengatakan persoalan data bocor ini hal yang serius karena terkait keamanan data pribadi masyarakat.</p>
+        <h1 style="color: green;">FAKTA</h1>
         `;
         break;
       case 'joinprabowo':
-        modalTitle.innerText = "Join Prabowo";
-        modalContent.innerHTML = `
-        <h1 style="color: green;">REAL</h1>
+        modalTitle.innerText = "Prabowo Resmi Jadi Capres?";
+        modalContent.innerHTML = `        
         <p>Empat partai besar yakni Golkar, Pan, PKB dan Geridra resmi mendukung Prabowo Subianto sebagai bakal calon Presiden 2024. Hadir dalam deklarasi dalam memberikan dukungan kepada calon Presiden (Capres) 2024, Prabowo Subianto, di antaranya Airlangga Hartarto Ketua Umum Partai Golkar, Ketua Umum Partai Amanat Nasional (PAN), Zulkifli Hasan (Zulhas) dan Ketua Umum Partai Kebangkitan Bangsa (PKB), Muhaimin Iskandari</p><br/><p>atas dukungan yang diberikan empat Partai besar kepada Prabowo Subianto, Sekretaris Jenderal (Sekjen) Gerindra Ahmad Muzani mengatakan jika dukungan dari partai besar akan menjadikan Prabowo Subianto sebagai Calon Presiden 2024 mendatang.</p>
+        <h1 style="color: green;">FAKTA</h1>
         `;
         break;
     }
