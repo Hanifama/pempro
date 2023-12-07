@@ -172,32 +172,52 @@
       <div class="offer__grid">
         <div class="offer__card">
           <img src="assets/viral.jpg" alt="offer" />
-          <h4>Kasus 1</h4>
-          <p>15 Sep 2023</p>
+          <h1>2024 Pemilu Di Tiadakan?</h1>
+          <p>Resmi DPR Tunda Pemilu 2024</p>
+          <p>20 Sep 2023</p>
           <div>
             <span class="emoji" data-type="hoax">😢😠😊</span>
-            <button class="btn" onclick="rateNews('hoax')">Rate Now</button>
+            <button class="btn" onclick="showBerita('kasusvideo')">Cek Kebenaran</button>
           </div>
         </div>
         <div class="offer__card">
-          <img src="assets/viral.jpg" alt="offer" />
-          <h4>Kasus 2</h4>
-          <p>15 Sep 2023</p>
+          <img src="assets/hack.jpg" alt="offer" />
+          <h1>KPU dibobol hacker?</h1>
+          <p>Integritas Pemilu dipertanyakan</p>
+          <p>20 Sep 2023</p>
           <div>
             <span class="emoji" data-type="hoax">😢😠😊</span>
-            <button class="btn" onclick="rateNews('hoax')">Rate Now</button>
+            <button class="btn" onclick="showBerita('kasushack')">Cek Kebenaran</button>
           </div>
         </div>
         <div class="offer__card">
-          <img src="assets/viral.jpg" alt="offer" />
-          <h4>Kasus 3</h4>
-          <p>15 Sep 2023</p>
+          <img src="assets/prabowo.jpg" alt="offer" />
+          <h1>Prabowo Resmi Jadi Capres?</h1>
+          <p>Deklarasi 4 Parpol dukung prabowo !!</p>
+          <p>20 Sep 2023</p>
           <div>
             <span class="emoji" data-type="hoax">😢😠😊</span>
-            <button class="btn" onclick="rateNews('hoax')">Rate Now</button>
+            <button class="btn" onclick="showBerita('joinprabowo')">Cek Kebenaran</button>
           </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="Berita" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeBerita()">&times;</span>
+      
+        <div class="berita-section">
+          <h2 id="modalTitleBerita">Test 1</h2>
+          <p id="modalIsiBerita">test 2</p>
+        </div>
+                
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
 
     <section class="section__container about__container" id="about">
       <div class="about__image">

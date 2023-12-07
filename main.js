@@ -170,9 +170,9 @@ function openModal(type) {
 
 function closeModal() {
   var modal = document.getElementById("myModal");
-  var modalProfile = document.getElementById("Profile");
+  var modalProfile = document.getElementById("Profile");  
   var overlay = document.getElementById("overlay");
-
+  
   modalProfile.style.display = "none";
   modal.style.display = "none";
   overlay.style.display = "none";
@@ -663,17 +663,103 @@ function showProfile(type) {
   overlay.style.display = "block";
 }
 
-function rateNews(type) {
-  const emojiSpan = document.querySelector(`span[data-type="${type}"]`);
+function showBerita(type) {
+  var modal = document.getElementById("Berita");
+  var overlay = document.getElementById("overlay");
+  var modalTitle = document.getElementById("modalTitleBerita");
+  var modalContent = document.getElementById("modalIsiBerita");
 
-  if (type === 'hoax') {
-    // Berita Hoax
-    emojiSpan.innerHTML = '😢';
-  } else if (type === 'provokasi') {
-    // Berita Provokasi
-    emojiSpan.innerHTML = '😠';
-  } else if (type === 'real') {
-    // Berita Real
-    emojiSpan.innerHTML = '😊';
+  // Tambahkan elemen loading dengan emoji sesuai kasus
+  var loadingEmoji;
+  switch (type) {
+    case 'kasusvideo':
+      loadingEmoji = '😠';
+      textInfo = 'Heum Sepertinya...';
+      break;
+    case 'kasushack':
+      loadingEmoji = '😊';
+      textInfo = 'Adoohh Sepertinya...';
+      break;
+    case 'joinprabowo':
+      loadingEmoji = '😊';
+      textInfo = 'Gimana Jadinya...';
+      break;
+    default:
+      loadingEmoji = '😊'; // Emoji default jika tidak ada kasus yang sesuai
   }
+
+  modalContent.innerHTML = `<span class="emoji" data-type="hoax">${loadingEmoji}</span><p>${textInfo}</p>`;
+
+  // Set timeout untuk simulasi loading, ganti nilai timeout dengan proses asinkronus yang sebenarnya
+  setTimeout(function () {
+    // Set konten modal sesuai dengan jenisnya
+    switch (type) {
+      case 'kasusvideo':
+        modalTitle.innerText = "Detail Kasus Video yang viral";
+        modalContent.innerHTML = `
+        <h1 style="color: red;">HOAX</h1>
+        <p>dalam video tersebut, penundaan Pemilu 2024 dinyatakan sebagai usulan dan keputusan terkait penundaan itu tergantung pada setiap ketua umum fraksi yang ada di DPR dan MPR. Sementara, Ketua DPR RI Puan Maharani seperti dilaporkan ANTARA, pada 15 Febuari 2022, menegaskan jadwal Pemilu 2024 telah ada dan merupakan kesepakatan bersama antara pemerintah, DPR RI, dan penyelenggara pemilu. Dengan demikian menurut Puan, Pemilu 2024 akan dilaksanakan sesuai dengan tanggal yang telah ditentukan, yaitu 14 Februari 2022. Selain itu pada 22 Maret 2022, Dewan Perwakilan Daerah (DPD) RI bersama Kementerian Dalam Negeri (Kemendagri) menyepakati tidak ada penundaan Pemilu 2024.</p>
+        
+        `;
+        break;
+      case 'kasushack':
+        modalTitle.innerText = "Kasus Hack";
+        modalContent.innerHTML = `
+        <h1 style="color: green;">REAL</h1>
+        <p>Website resmi Komisi Pemilihan Umum (KPU) dilaporkan dibobol hacker dan kabarnya 204 juta data daftar pemilih tetap (DPT) bocor. Wakil Ketua Komisi I DPR RI, Abdul Kharis mengatakan kebocoran data ini harus dipertanggungjawabkan oleh pengolah data yakni KPU.</p><br/><p>Sementara Communication and Information System Security Research Center (CISSReC) mengatakan kebocoran data KPU merupakan data DPT terkait Pemilu. Dimana data sample 500 ribu yang ditunjukkan hacker sangat terbuka yang meliputi data KK, KTP hingga TPS.</p><br/><p>Chairman Lembaga Riset Keamanan Siber CISSReC, Pratama Persada mengatakan persoalan data bocor ini hal yang serius karena terkait keamanan data pribadi masyarakat.</p>
+        `;
+        break;
+      case 'joinprabowo':
+        modalTitle.innerText = "Join Prabowo";
+        modalContent.innerHTML = `
+        <h1 style="color: green;">REAL</h1>
+        <p>Empat partai besar yakni Golkar, Pan, PKB dan Geridra resmi mendukung Prabowo Subianto sebagai bakal calon Presiden 2024. Hadir dalam deklarasi dalam memberikan dukungan kepada calon Presiden (Capres) 2024, Prabowo Subianto, di antaranya Airlangga Hartarto Ketua Umum Partai Golkar, Ketua Umum Partai Amanat Nasional (PAN), Zulkifli Hasan (Zulhas) dan Ketua Umum Partai Kebangkitan Bangsa (PKB), Muhaimin Iskandari</p><br/><p>atas dukungan yang diberikan empat Partai besar kepada Prabowo Subianto, Sekretaris Jenderal (Sekjen) Gerindra Ahmad Muzani mengatakan jika dukungan dari partai besar akan menjadikan Prabowo Subianto sebagai Calon Presiden 2024 mendatang.</p>
+        `;
+        break;
+    }
+
+    // Hapus elemen loading setelah konten dimuat
+    modalContent.querySelector('.emoji').remove();
+  }, 1000); // Ganti nilai timeout dengan proses asinkronus yang sebenarnya
+
+  modal.style.display = "block";
+  overlay.style.display = "block";
+
+  // Menambahkan event listener untuk menutup modal jika di-klik di luar modal
+  overlay.addEventListener("click", closeModalOutside);
 }
+
+
+function closeModalOutside() {
+  var modal = document.getElementById("Berita");
+  var overlay = document.getElementById("overlay");
+
+  modal.style.display = "none";
+  overlay.style.display = "none";
+
+  // Menghapus event listener setelah modal ditutup
+  overlay.removeEventListener("click", closeModalOutside);
+}
+
+function closeBerita() {
+  var modal = document.getElementById("Berita");
+  var overlay = document.getElementById("overlay");
+
+  modal.style.display = "none";
+  overlay.style.display = "none";
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var offerCards = document.querySelectorAll('.offer__card');
+
+  offerCards.forEach(function (card) {
+    var h4Text = card.querySelector('h4').textContent;
+
+    if (h4Text === 'Hoax') {
+      card.querySelector('h4').style.color = 'red';
+    } else if (h4Text === 'Real') {
+      card.querySelector('h4').style.color = 'green';
+    }
+  });
+});

@@ -364,6 +364,7 @@ nav {
   transition: 0.3s;
 }
 
+
 .offer__card:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
@@ -371,13 +372,11 @@ nav {
 .offer__card img {
   margin-bottom: 1rem;
   border-radius: 2px;
+  padding: 3rem;
 }
 
-.offer__card h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text-dark);
+.offer__card h1{
+  padding: 0,5rem;
 }
 
 .offer__card p {
